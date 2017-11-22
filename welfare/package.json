@@ -1,0 +1,17 @@
+{
+  "name": "welfare",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev-server": "webpack-dev-server --inline --host 0.0.0.0 --port 13000 --config ./build/webpack.config.dev-server.js",
+    "dev": "webpack --config ./build/webpack.config.dev.js",
+    "pd": "webpack --config ./build/webpack.config.pd.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dll": "^1.0.0"
+  }
+}
