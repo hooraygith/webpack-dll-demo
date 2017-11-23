@@ -10,7 +10,7 @@
     <!--隐藏ios上的浏览器地址栏-->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title>员工福利商城</title>
-    <link rel="stylesheet" href="<%= htmlWebpackPlugin.options.dllCss %>">
+    <link rel="stylesheet" href="">
     <style>
         html {
             font-size: 100px;
@@ -71,9 +71,9 @@
         })(document, window);
     </script>
     <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
-    <script src="<%= htmlWebpackPlugin.options.dllJs %>" crossorigin="anonymous"></script>
-    <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
-        <script src="<%=htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
-    <% } %>
+    <script src="/node_modules/dll/dist/dll.js" crossorigin="anonymous"></script>
+    
+        <script src="/index-92f0f352.js"></script>
+    
 </body>
 </html>

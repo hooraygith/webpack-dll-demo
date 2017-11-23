@@ -6,7 +6,7 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const config = require('./webpack.config.base.js')
 
-config.output.path = process.cwd() + '/dist/pd/'
+config.output.path = process.cwd() + '/dist/test/'
 
 config.plugins.push(
     new webpack.optimize.UglifyJsPlugin({

@@ -5,22 +5,16 @@ const Clean = require('clean-webpack-plugin')
 module.exports = {
     entry: {
         dll: [
-            'jquery'
+            'vue',
+            'vuex',
+            'vue-router',
+            'zepto-webpack'
         ]
     },
     output: {
         path: path.resolve(process.cwd(), `dist/`),
         filename: '[name].js',
-        library: '[name]',
-        libraryTarget: 'umd',
-        umdNamedDefine: true
-    },
-    resolve: {
-        modules: ['node_modules'],
-        alias: {
-            'vue': 'vue/dist/vue.common.js'
-        },
-        extensions: ['.js', '.vue']
+        library: '[name]'
     },
     module: {
         rules: [{
@@ -33,7 +27,12 @@ module.exports = {
             name: '[name]',
             path: `dist/[name].json`
         }),
-        new Clean(['dist/dev'], {
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false
+            }
+        }),
+        new Clean(['dist'], {
             root: process.cwd()
         })
     ]

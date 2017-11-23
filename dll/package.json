@@ -4,13 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack && cp ./dist/* ../welfare/node_modules/dll/dist/"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "jquery": "^3.2.1"
+    "jquery": "^3.2.1",
+    "vue": "^2.5.8",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1",
+    "zepto-webpack": "^1.2.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
